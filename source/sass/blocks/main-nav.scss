@@ -1,4 +1,8 @@
 .main-nav {
+  &__wrapper {
+    display: flex;
+  }
+
   &__list {
     display: flex;
     margin: 0;
@@ -14,11 +18,23 @@
   }
 
   &__link {
-    color: $color-default-white;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 133%;
+    text-align: right;
+    color: rgba(20, 20, 21, 0.8);
 
     &.is-active {
       opacity: 0.6;
     }
+  }
+
+  &__phone {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 133%;
+    text-align: right;
+    color: #141415;
   }
 
   &__toggle {

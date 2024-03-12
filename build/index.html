@@ -33,69 +33,111 @@
     </svg>
   </div>
   <div class="wrapper">
-    <-- для внутренних страниц используйте "headerActiveLinkIndex" : 0\1\2 -->
-      <header class="header ">
-        <div class="container">
-          <span class="header__logo">
-            Логотип
-          </span>
-          <nav class="main-nav">
-            <button class="main-nav__toggle btn-reset" type="button" aria-label="Переключатель отображения меню" aria-pressed="false">
-              <svg width="20" height="20" aria-hidden="true">
-                <use xlink:href="#icon-burger"></use>
-              </svg>
-            </button>
-            <div class="main-nav__wrapper">
-              <ul class="main-nav__list">
-                <li class="main-nav__item">
-                  <a class="main-nav__link " href="#">Страница 1</a>
-                </li>
-                <li class="main-nav__item">
-                  <a class="main-nav__link " href="#">Страница 2</a>
-                </li>
-                <li class="main-nav__item">
-                  <a class="main-nav__link " href="#">Страница 3</a>
-                </li>
-              </ul>
+    <header class="header ">
+      <div class="container">
+        <span class="header__logo">
+          Клининговая компания
+        </span>
+        <nav class="main-nav">
+          <button class="main-nav__toggle btn-reset" type="button" aria-label="Переключатель отображения меню" aria-pressed="false">
+            <svg width="20" height="20" aria-hidden="true">
+              <use xlink:href="#icon-burger"></use>
+            </svg>
+          </button>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a class="main-nav__link " href="#">О компании</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link " href="#">Новости</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link " href="#">Помощь</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link " href="#">Отзывы</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link " href="#">Контакты</a>
+              </li>
+            </ul>
+            <a class="main-nav__phone" href="">+7 495 123-45-67</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="description">
+        <div class="description__left">
+          <div class="description__textWrapper">
+            <h2 class="description__title">Клининговая <br> компания</h2>
+            <p class="description__slogan">Качественная уборка квартир, офисных и производственных помещений</p>
+            <div class="description__btnBlock">
+              <a class="description__servicesBtn" href="#">Услуги</a>
+              <a class="description__aboutBtn" href="">О компании</a>
             </div>
-          </nav>
-        </div>
-      </header>
-      <main>
-        <div class="container">
-          <p><a href="#" data-open-modal="feedback">modal--feedback link</a></p>
-          <p><a href="#" data-open-modal="success">modal--success link</a></p>
-        </div>
-      </main>
-      <footer class="footer">
-        <div class="container"></div>
-      </footer>
-      <div class="modal modal--preload    " data-modal="feedback">
-        <div class="modal__wrapper">
-          <div class="modal__overlay" data-close-modal></div>
-          <div class="modal__content">
-            <p class="modal__description">Обычная модалка</p>
-            <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-              <svg width="15" height="15">
-                <use xlink:href="#icon-close"></use>
-              </svg>
-            </button>
+            <p class="description__label">Скидка 15% на первую уборку</p>
           </div>
         </div>
+        <img src="../../img/content/description-img.png" alt="">
       </div>
-      <div class="modal modal--preload   modal--fit-content   modal--no-scale   modal--some-mod " data-modal="success">
-        <div class="modal__wrapper">
-          <div class="modal__overlay" data-close-modal></div>
-          <div class="modal__content">
-            <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл и передан модификатор `some-mod`</p>
-            <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-              <svg width="15" height="15">
-                <use xlink:href="#icon-close"></use>
-              </svg>
-            </button>
-          </div>
+      <div class="container">
+        <div class="services">
+          <p>Наши услуги</p>
+          <h2>Услуги</h2>
+          <p>Мы оказываем наши услуги быстро и качественно</p>
+          <ul>
+            <li>
+              <img src="../../img/content/services-1.png" alt="Мойка окон">
+              <p>Мойка окон</p>
+              <p>от 1 390 ₽</p>
+            </li>
+            <li>
+              <img src="../../img/content/services-2.png" alt="Регулярная уборка">
+              <p>Регулярная уборка</p>
+              <p>от 990 ₽</p>
+            </li>
+            <li>
+              <img src="../../img/content/services-3.png" alt="Промышленный клининг">
+              <p>Промышленный клининг</p>
+              <p>от 2 950 ₽</p>
+            </li>
+          </ul>
+        </div>
+        <!-- <p><a href="#" data-open-modal="feedback">modal--feedback link</a></p>
+        <p><a href="#" data-open-modal="success">modal--success link</a></p> -->
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container"></div>
+    </footer>
+    <div class="modal modal--preload    " data-modal="feedback">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <p class="modal__description">Обычная модалка</p>
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="15" height="15">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
         </div>
       </div>
+    </div>
+    <div class="modal modal--preload   modal--fit-content   modal--no-scale   modal--some-mod " data-modal="success">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл и передан модификатор `some-mod`</p>
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="15" height="15">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>

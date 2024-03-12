@@ -13,15 +13,16 @@
   </div>
 
   <div class="wrapper">
-    <-- для внутренних страниц используйте "headerActiveLinkIndex": 0\1\2 --> 
     @@include("source/html/base/header.html", {
       "index": true
     })
 
     <main>
+      @@include("source/html/components/description.html")
       <div class="container">
-        <p><a href="#" data-open-modal="feedback">modal--feedback link</a></p>
-        <p><a href="#" data-open-modal="success">modal--success link</a></p>
+        @@include("source/html/components/services.html")
+        <!-- <p><a href="#" data-open-modal="feedback">modal--feedback link</a></p>
+        <p><a href="#" data-open-modal="success">modal--success link</a></p> -->
       </div>
     </main>
 
