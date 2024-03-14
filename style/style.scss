@@ -1,0 +1,395 @@
+@mixin vp-1919 {
+  @media (max-width: 1919px) {
+    @content;
+  }
+}
+
+@mixin vp-1439 {
+  @media (max-width: 1439px) {
+    @content;
+  }
+}
+
+@mixin vp-1023 {
+  @media (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin vp-767 {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin vp-500 {
+  @media (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin vp-374 {
+  @media (max-width: 374px) {
+    @content;
+  }
+}
+
+$tf-default: ease;
+$trans-default: 0.3s $tf-default;
+$trans-modal: 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+$trans-600: 0.6s $tf-default;
+
+$color-default-black: #000000;
+$color-default-white: #ffffff;
+$color-transparent: rgba(255, 255, 255, 0);
+
+// Project palette
+// для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
+
+$color-neon-blue: #2c39f2;
+$color-torch-red: #ff1553;
+$color-dodger-blue: #0087ea;
+
+*,
+:before,
+:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 700;
+
+  src: url('../fonts/Gilroy-Bold.woff2') format('woff2'),
+    url('../fonts/Gilroy-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/Gilroy-Semibold.woff2') format('woff2'),
+    url('../fonts/Gilroy-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/Gilroy-Medium.woff2') format('woff2'),
+    url('../fonts/Gilroy-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Stem';
+  src: url('../fonts/Stem-Regular.woff2') format('woff2'),
+    url('../fonts/Stem-Regular.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Stem';
+  src: url('../fonts/Stem-Medium.woff2') format('woff2'),
+    url('../fonts/Stem-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Stem';
+  src: url('../fonts/Stem-Bold.woff2') format('woff2'),
+    url('../fonts/Stem-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+:root {
+  --font-family: 'Stem', sans-serif;
+  --second-family: 'Gilroy', sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  color: #000;
+  box-sizing: border-box;
+}
+
+main {
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+}
+
+.header {
+  display: flex;
+  padding: 34px 40px;
+  background-color: #ffffff;
+  color: rgba(20, 20, 21, 0.8);
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    color: $color-dodger-blue;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 114%;
+  }
+}
+
+.main-nav {
+  margin-top: 4px;
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__list {
+    display: flex;
+    margin: 0;
+    margin-right: 20px;
+    margin-left: 60px;
+    padding: 0;
+    gap: 4px;
+
+    list-style: none;
+  }
+
+  &__item {
+    margin-right: 20px;
+  }
+
+  &__link {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 133%;
+    text-align: right;
+    color: rgba(20, 20, 21, 0.8);
+
+    &.is-active {
+      opacity: 0.6;
+    }
+  }
+
+  &__phone {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 133%;
+    text-align: right;
+    color: #141415;
+  }
+
+  &__toggle {
+    display: none;
+  }
+}
+
+.description {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 51% 1fr;
+
+  &__left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__textWrapper {
+    margin-bottom: 2px;
+    margin-left: 40px;
+    width: 445px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 106%;
+    color: $color-default-black;
+  }
+
+  &__slogan {
+    margin-top: 30px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 130%;
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  &__btnBlock {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+  }
+
+  &__servicesBtn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    padding: 10px 20px;
+    width: 124px;
+    min-height: 56px;
+    background: $color-dodger-blue;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    text-align: center;
+    color: #fff;
+  }
+
+  &__aboutBtn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 6px;
+    padding: 10px 20px;
+    width: 167px;
+    min-height: 56px;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.04), 0 0 4px 0 rgba(0, 0, 0, 0.04);
+    background: #fff;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    text-align: center;
+    color: #0087ea;
+  }
+
+  &__label {
+    margin-top: 25px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 133%;
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background: #f7f8fa;
+
+  &_subTitle {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 130%;
+    text-align: center;
+    color: #0087ea;
+  }
+
+  &_title {
+    margin-top: 18px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 106%;
+    text-align: center;
+    color: #000;
+  }
+
+  &_descritpion {
+    margin-top: 30px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 130%;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  &_list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 60px;
+  }
+
+  &_item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 350px;
+    height: 380px;
+    padding: 30px;
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    h3 {
+      position: relative;
+      z-index: 3;
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 130%;
+      text-align: center;
+      color: #fff;
+    }
+
+    p {
+      margin-top: 10px;
+      position: relative;
+      z-index: 3;
+      font-family: var(--font-family);
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 133%;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+}
