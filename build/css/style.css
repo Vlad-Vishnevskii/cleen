@@ -882,7 +882,7 @@ button,
   background: #0087ea;
   font-weight: 500;
   font-size: 18px;
-  line-height: 133%;
+  line-height: 100%;
   text-align: center;
   color: #fff;
 }
@@ -917,6 +917,57 @@ button,
   -ms-flex-align: center;
   align-items: center;
   margin-top: 72px;
+  background: #f7f8fa;
+}
+
+.services_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.services_item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 350px;
+  height: 380px;
+}
+
+.services_item img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.services_item h3 {
+  color: white;
+  position: relative;
+  z-index: 3;
+}
+
+.services_item p {
+  color: white;
+  position: relative;
+  z-index: 3;
 }
 
 /* @mixin hover-focus {
