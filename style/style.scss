@@ -718,7 +718,7 @@ img {
     color: rgba(0, 0, 0, 0.7);
   }
 
-  &_list {
+  &__list {
     display: flex;
     justify-content: center;
     gap: 30px;
@@ -728,7 +728,7 @@ img {
     margin-top: 65px;
   }
 
-  &_item {
+  &__item {
     position: relative;
     display: flex;
     flex-direction: column;
