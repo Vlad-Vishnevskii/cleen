@@ -537,4 +537,108 @@ img {
   line-height: 138%;
   text-align: center;
   color: rgba(0, 0, 0, 0.4);
+}
+
+.certificates {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 120px 0;
+  background: #0087ea;
+}
+.certificates__title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 100%;
+  text-align: center;
+  color: #fff;
+}
+.certificates__list {
+  display: flex;
+  gap: 30px;
+  margin-top: 65px;
+  list-style: none;
+}
+
+.ourCases {
+  padding: 120px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ourCases__subtitle {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 130%;
+  text-align: center;
+  color: #0087ea;
+}
+.ourCases__title {
+  margin-top: 20px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 106%;
+  text-align: center;
+  color: #000;
+}
+.ourCases__description {
+  margin-top: 25px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 130%;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.7);
+}
+.ourCases_list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 65px;
+}
+.ourCases_item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 255px;
+  height: 300px;
+  padding: 30px 20px;
+}
+.ourCases_item img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+.ourCases_item h3 {
+  position: relative;
+  z-index: 3;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 130%;
+  text-align: center;
+  color: #fff;
+}
+.ourCases_item p {
+  margin-top: 10px;
+  position: relative;
+  z-index: 3;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 133%;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
 }/*# sourceMappingURL=style.css.map */
