@@ -684,7 +684,7 @@ img {
 }
 
 .ourCases {
-  padding: 120px 0;
+  padding: 120px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -721,6 +721,7 @@ img {
   &__list {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 30px;
     list-style: none;
     padding: 0;
@@ -769,6 +770,203 @@ img {
       line-height: 133%;
       text-align: center;
       color: rgba(255, 255, 255, 0.8);
+    }
+  }
+}
+
+.partners {
+  padding: 120px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4) url('../img/partners-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__title {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 106%;
+    text-align: center;
+    color: #fff;
+  }
+
+  &__description {
+    margin-top: 25px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 130%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 720px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-top: 60px;
+  }
+}
+
+.customInput {
+  width: 100%;
+  height: auto;
+
+  input {
+    width: 100%;
+    padding: 14px 18px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    color: #333;
+
+    &::placeholder {
+      font-family: var(--font-family);
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 100%;
+      color: rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+.customToggle {
+  input[type='radio'] {
+    display: none;
+  }
+
+  label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 40px;
+    margin-right: 0;
+    line-height: 18px;
+    user-select: none;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    color: #333;
+  }
+
+  label::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+  }
+
+  input[type='radio']:checked + label:before {
+    background: transparent;
+    border: 8px solid #0087ea;
+    border-radius: 50%;
+  }
+}
+
+.order {
+  padding: 100px 20px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__title {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 108%;
+    text-align: center;
+    color: #000;
+  }
+
+  &__description {
+    margin-top: 20px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 133%;
+    text-align: center;
+    color: #333;
+  }
+
+  &__form {
+    width: 100%;
+    margin-top: 25px;
+  }
+
+  &__input {
+    margin-top: 15px;
+  }
+
+  &__radio {
+    margin-top: 30px;
+  }
+
+  &__radioTitle {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 133%;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  &__radioItem {
+    margin-bottom: 20px;
+  }
+
+  &__submitBtn {
+    margin-top: 30px;
+    background: #0087ea;
+    width: 100%;
+    min-height: 56px;
+    padding: 20px 40px;
+    border-radius: 6px;
+    border: none;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  &__terms {
+    margin-top: 23px;
+    padding: 0 45px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 138%;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.4);
+
+    a {
+      list-style: none;
+      color: #0087ea;
     }
   }
 }
