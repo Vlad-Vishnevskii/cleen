@@ -192,9 +192,11 @@ img {
     line-height: 133%;
     text-align: right;
     color: rgba(20, 20, 21, 0.8);
+    transition: $trans-default;
 
-    &.is-active {
-      opacity: 0.6;
+    &:hover,
+    &:focus {
+      color: rgba(20, 20, 21, 1);
     }
   }
 
@@ -204,6 +206,12 @@ img {
     line-height: 133%;
     text-align: right;
     color: #141415;
+    transition: $trans-default;
+
+    &:hover,
+    &:focus {
+      color: rgba(20, 20, 21, 0.8);
+    }
   }
 
   &__toggle {
@@ -265,6 +273,12 @@ img {
     line-height: 100%;
     text-align: center;
     color: #fff;
+    transition: $trans-default;
+
+    &:hover,
+    &:focus {
+      background: rgba(0, 135, 234, 0.8);
+    }
   }
 
   &__aboutBtn {
@@ -284,6 +298,12 @@ img {
     line-height: 100%;
     text-align: center;
     color: #0087ea;
+    transition: $trans-default;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
   }
 
   &__label {
@@ -525,6 +545,12 @@ img {
     line-height: 133%;
     text-align: center;
     color: #fff;
+    transition: $trans-default;
+
+    &:hover,
+    &:focus {
+      background: rgba(0, 135, 234, 0.8);
+    }
   }
 }
 
@@ -593,6 +619,13 @@ img {
     text-align: center;
     color: #fff;
     margin-top: 32px;
+
+    transition: $trans-default;
+
+    &:hover,
+    &:focus {
+      background: rgba(0, 135, 234, 0.8);
+    }
   }
 }
 
@@ -850,6 +883,7 @@ img {
     font-size: 18px;
     line-height: 100%;
     color: #333;
+    outline: none;
 
     &::placeholder {
       font-family: var(--font-family);
@@ -857,6 +891,13 @@ img {
       font-size: 18px;
       line-height: 100%;
       color: rgba(0, 0, 0, 0.2);
+    }
+
+    transition: $trans-default;
+
+    &:hover,
+    &:focus {
+      border: 1px solid rgba(0, 0, 0, 1);
     }
   }
 }
@@ -879,6 +920,13 @@ img {
     font-size: 18px;
     line-height: 100%;
     color: #333;
+
+    transition: $trans-default;
+
+    &:hover,
+    &:focus {
+      color: #000000;
+    }
   }
 
   label::before {
@@ -892,6 +940,7 @@ img {
     width: 23px;
     height: 23px;
     border-radius: 50%;
+    transition: $tf-default;
   }
 
   input[type='radio']:checked + label:before {
@@ -974,6 +1023,13 @@ img {
     text-align: center;
     color: #fff;
     cursor: pointer;
+
+    transition: $trans-default;
+
+    &:hover,
+    &:focus {
+      background: rgba(0, 135, 234, 0.8);
+    }
   }
 
   &__terms {
@@ -989,6 +1045,12 @@ img {
     a {
       list-style: none;
       color: #0087ea;
+      transition: $trans-default;
+
+      &:hover,
+      &:focus {
+        color: rgba(0, 135, 234, 0.8);
+      }
     }
   }
 }
@@ -1025,13 +1087,24 @@ img {
     font-size: 18px;
     line-height: 133%;
     color: rgba(255, 255, 255, 0.8);
+    transition: $trans-default;
 
     &--phone {
       margin-top: 19px;
+
+      &:hover,
+      &:focus {
+        opacity: 0.5;
+      }
     }
 
     &--email {
       color: #fff;
+
+      &:hover,
+      &:focus {
+        opacity: 0.5;
+      }
     }
 
     &--adress {
@@ -1069,6 +1142,13 @@ img {
     background: #0087ea;
     width: 56px;
     height: 56px;
+
+    transition: $trans-default;
+
+    &:hover,
+    &:focus {
+      background: rgba(0, 135, 234, 0.8);
+    }
   }
 
   &__links {
@@ -1084,6 +1164,13 @@ img {
     font-size: 18px;
     line-height: 133%;
     color: rgba(0, 0, 0, 0.8);
+
+    transition: $trans-default;
+
+    &:hover,
+    &:focus {
+      color: rgba(0, 0, 0, 1);
+    }
   }
 
   &__copyright {

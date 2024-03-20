@@ -28,22 +28,24 @@
           <div class="main-nav__wrapper">
             <ul class="main-nav__list">
               <li class="main-nav__item">
-                <a class="main-nav__link">О компании</a>
+                <a href="#about" class="main-nav__link">О компании</a>
               </li>
               <li class="main-nav__item">
-                <a class="main-nav__link">Новости</a>
+                <a href="#" class="main-nav__link">Новости</a>
               </li>
               <li class="main-nav__item">
-                <a class="main-nav__link">Помощь</a>
+                <a href="#" class="main-nav__link">Помощь</a>
               </li>
               <li class="main-nav__item">
-                <a class="main-nav__link">Отзывы</a>
+                <a href="#feedback" class="main-nav__link">Отзывы</a>
               </li>
               <li class="main-nav__item">
-                <a class="main-nav__link">Контакты</a>
+                <a href="#contacts" class="main-nav__link">Контакты</a>
               </li>
             </ul>
-            <a class="main-nav__phone" href="">+7 495 123-45-67</a>
+            <a class="main-nav__phone" href="tel:+74951234567"
+              >+7 495 123-45-67</a
+            >
           </div>
         </nav>
       </div>
@@ -130,7 +132,7 @@
         </div>
       </div>
 
-      <div class="about">
+      <div id="about" class="about">
         <div class="about_container">
           <img src="./img/about.png" alt="" />
           <div class="about_textContainer">
@@ -152,7 +154,7 @@
         </div>
       </div>
 
-      <div class="feedback">
+      <div id="feedback" class="feedback">
         <h2 class="feedback_title">Отзывы</h2>
         <p class="feedback_description">
           Продавать больше - это все, что нужно, чтобы направлять посетителей
@@ -300,13 +302,17 @@
         </div>
       </div>
 
-      <div class="contacts">
+      <div id="contacts" class="contacts">
         <div class="contacts__text">
           <h2 class="contacts__title">Контакты</h2>
-          <a class="contacts__item contacts__item--phone" href="#"
+          <a
+            class="contacts__item contacts__item--phone"
+            href="tel:+79876543210"
             >+7 987 654-32-10</a
           >
-          <a class="contacts__item contacts__item--email" href="#"
+          <a
+            class="contacts__item contacts__item--email"
+            href="mailto:info@constructor.ru"
             >info@constructor.ru</a
           >
           <p class="contacts__item contacts__item--adress">
@@ -395,10 +401,10 @@
       </ul>
 
       <nav class="footer__links">
-        <a class="footer__link" href="#">О компании</a>
+        <a class="footer__link" href="#about">О компании</a>
         <a class="footer__link" href="#">Новости</a>
         <a class="footer__link" href="#">Помощь</a>
-        <a class="footer__link" href="#">Контакты</a>
+        <a class="footer__link" href="#contacts">Контакты</a>
       </nav>
 
       <p class="footer__copyright">© 2020 Название компании</p>
