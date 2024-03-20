@@ -394,6 +394,19 @@ img {
   }
 }
 
+.animate {
+  animation: fade 0.5s ease-out;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .gallery {
   &_mainImgWrapper {
     position: relative;
@@ -402,6 +415,8 @@ img {
   &_mainImg {
     width: 100%;
     height: auto;
+    width: 100%;
+    aspect-ratio: 16 / 9;
   }
 
   &_frame {
@@ -427,6 +442,13 @@ img {
     border-radius: 8px;
     width: 80px;
     height: 80px;
+    transition: $trans-default;
+    overflow: hidden;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+    }
 
     img {
       object-fit: cover;

@@ -302,12 +302,26 @@ img {
   color: rgba(255, 255, 255, 0.8);
 }
 
+.animate {
+  animation: fade 0.5s ease-out;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .gallery_mainImgWrapper {
   position: relative;
 }
 .gallery_mainImg {
   width: 100%;
   height: auto;
+  width: 100%;
+  aspect-ratio: 16/9;
 }
 .gallery_frame {
   position: absolute;
@@ -330,6 +344,12 @@ img {
   border-radius: 8px;
   width: 80px;
   height: 80px;
+  transition: 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+.gallery_btnItem:hover {
+  transform: scale(1.1);
 }
 .gallery_btnItem img {
   -o-object-fit: cover;
