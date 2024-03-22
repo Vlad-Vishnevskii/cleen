@@ -11,44 +11,30 @@
   </head>
   <body>
     <header class="header">
-      <div class="container">
-        <span class="header__logo"> Клининговая компания </span>
+      <span class="header__logo"> Клининговая компания </span>
 
-        <nav class="main-nav">
-          <button
-            class="main-nav__toggle btn-reset"
-            type="button"
-            aria-label="Переключатель отображения меню"
-            aria-pressed="false"
-          >
-            <svg width="20" height="20" aria-hidden="true">
-              <use xlink:href="#icon-burger"></use>
-            </svg>
-          </button>
-          <div class="main-nav__wrapper">
-            <ul class="main-nav__list">
-              <li class="main-nav__item">
-                <a href="#about" class="main-nav__link">О компании</a>
-              </li>
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link">Новости</a>
-              </li>
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link">Помощь</a>
-              </li>
-              <li class="main-nav__item">
-                <a href="#feedback" class="main-nav__link">Отзывы</a>
-              </li>
-              <li class="main-nav__item">
-                <a href="#contacts" class="main-nav__link">Контакты</a>
-              </li>
-            </ul>
-            <a class="main-nav__phone" href="tel:+74951234567"
-              >+7 495 123-45-67</a
-            >
-          </div>
-        </nav>
-      </div>
+      <input id="menu-toggle" type="checkbox" />
+      <label class="menu-button-container" for="menu-toggle">
+        <div class="menu-button"></div>
+      </label>
+      <ul class="menu">
+        <li>
+          <a href="#about" class="main-nav__link">О компании</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#" class="main-nav__link">Новости</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#" class="main-nav__link">Помощь</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#feedback" class="main-nav__link">Отзывы</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#contacts" class="main-nav__link">Контакты</a>
+        </li>
+      </ul>
+      <a class="main-nav__phone" href="tel:+74951234567">+7 495 123-45-67</a>
     </header>
 
     <main>
