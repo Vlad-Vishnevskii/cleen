@@ -162,6 +162,7 @@ img {
     font-weight: 700;
     font-size: 28px;
     line-height: 114%;
+    margin-right: 10px;
   }
 }
 
@@ -233,6 +234,7 @@ img {
   padding: 0;
   margin-left: auto;
   margin-right: 30px;
+  background-color: #ffffff;
 }
 
 .menu > li {
@@ -318,7 +320,6 @@ img {
   }
 
   #menu-toggle:checked ~ .menu li {
-    border-top: 1px solid transparent;
     height: 2.5em;
     padding: 0.5em;
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
@@ -337,12 +338,24 @@ img {
     color: #222;
     background-color: #ffffff;
   }
+
+  @media (max-width: 400px) {
+    .menu {
+      margin-top: 103px;
+    }
+  }
 }
 
 .description {
   width: 100%;
   display: grid;
   grid-template-columns: 51% 1fr;
+
+  @include vp-720 {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 
   &__left {
     display: flex;
@@ -352,6 +365,11 @@ img {
 
     @include vp-1080 {
       padding-left: 20px;
+    }
+
+    @include vp-720 {
+      padding: 0 20px;
+      padding-bottom: 20px;
     }
   }
 
@@ -364,6 +382,10 @@ img {
       width: 100%;
       margin-left: 0;
     }
+
+    @include vp-720 {
+      margin-top: 20px;
+    }
   }
 
   &__title {
@@ -374,6 +396,10 @@ img {
 
     @include vp-1080 {
       font-size: 45px;
+    }
+
+    @include vp-720 {
+      font-size: 30px;
     }
   }
 
@@ -388,6 +414,11 @@ img {
       margin-top: 20px;
       font-size: 20px;
     }
+
+    @include vp-720 {
+      margin-top: 10px;
+      font-size: 16px;
+    }
   }
 
   &__btnBlock {
@@ -398,6 +429,10 @@ img {
     @include vp-1080 {
       margin-top: 20px;
       gap: 15px;
+    }
+
+    @include vp-720 {
+      flex-wrap: wrap;
     }
   }
 
@@ -473,6 +508,18 @@ img {
   padding-bottom: 120px;
   background: #f7f8fa;
 
+  @include vp-1080 {
+    padding-top: 60px;
+    padding-bottom: 300px;
+  }
+
+  @include vp-720 {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   &_subTitle {
     font-family: var(--font-family);
     font-weight: 500;
@@ -480,6 +527,14 @@ img {
     line-height: 130%;
     text-align: center;
     color: #0087ea;
+
+    @include vp-1080 {
+      font-size: 22px;
+    }
+
+    @include vp-720 {
+      font-size: 18px;
+    }
   }
 
   &_title {
@@ -490,6 +545,15 @@ img {
     line-height: 106%;
     text-align: center;
     color: #000;
+
+    @include vp-1080 {
+      margin-top: 10px;
+      font-size: 45px;
+    }
+
+    @include vp-720 {
+      font-size: 30px;
+    }
   }
 
   &_descritpion {
@@ -500,16 +564,28 @@ img {
     line-height: 130%;
     text-align: center;
     color: rgba(0, 0, 0, 0.7);
+
+    @include vp-1080 {
+      margin-top: 10px;
+      font-size: 20px;
+    }
   }
 
   &_list {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 30px;
     list-style: none;
     padding: 0;
     margin: 0;
     margin-top: 60px;
+
+    @include vp-1080 {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px;
+    }
   }
 
   &_item {
@@ -521,6 +597,18 @@ img {
     width: 350px;
     height: 380px;
     padding: 30px;
+
+    @include vp-1080 {
+      width: 320px;
+      height: 350px;
+    }
+
+    @include vp-720 {
+      max-width: 320px;
+      width: 100%;
+      height: initial;
+      min-height: 340px;
+    }
 
     img {
       position: absolute;
@@ -587,6 +675,35 @@ img {
     z-index: 2;
     right: 11.5%;
     top: 29%;
+
+    @include vp-1080 {
+      top: -40%;
+      right: initial;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @media (max-width: 900px) {
+      top: -50%;
+    }
+
+    @include vp-720 {
+      display: none;
+    }
+  }
+
+  &_frameMobile {
+    display: none;
+
+    &.frame {
+      border: none;
+      box-shadow: none;
+    }
+
+    @include vp-720 {
+      display: block;
+      margin-bottom: 15px;
+    }
   }
 
   &_btnList {
@@ -598,6 +715,16 @@ img {
     list-style: none;
     margin: 0;
     padding: 0;
+
+    @include vp-1080 {
+      bottom: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @include vp-720 {
+      gap: 15px;
+    }
   }
 
   &_btnItem {
@@ -608,6 +735,12 @@ img {
     transition: $trans-default;
     overflow: hidden;
     cursor: pointer;
+
+    @include vp-720 {
+      border: 1px solid #fff;
+      width: 45px;
+      height: 45px;
+    }
 
     &:hover {
       transform: scale(1.1);
@@ -621,6 +754,10 @@ img {
 
     &--active {
       border: 4px solid #0087ea;
+
+      @include vp-720 {
+        border: 2px solid #0087ea;
+      }
     }
   }
 }
@@ -632,6 +769,12 @@ img {
   width: 350px;
   min-height: 332px;
   background: #fff;
+
+  @include vp-720 {
+    width: 100%;
+    max-width: 350px;
+    padding: 20px;
+  }
 
   &_title {
     font-family: var(--second-family);
@@ -702,8 +845,21 @@ img {
   justify-content: center;
   padding: 100px 0;
 
+  @include vp-1080 {
+    padding: 50px 20px;
+  }
+
   &_textContainer {
     margin-top: 95px;
+
+    @media (max-width: 1200px) {
+      width: 100%;
+      max-width: 500px;
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &_container {
@@ -711,6 +867,13 @@ img {
     gap: 125px;
     width: 100%;
     max-width: 1110px;
+
+    @media (max-width: 1200px) {
+      flex-direction: column;
+      align-items: center;
+      padding: 0 20px;
+      gap: 0;
+    }
   }
 
   &_subTitle {
@@ -719,6 +882,10 @@ img {
     font-size: 18px;
     line-height: 133%;
     color: #0087ea;
+
+    @media (max-width: 1200px) {
+      text-align: center;
+    }
   }
 
   &_title {
@@ -728,10 +895,27 @@ img {
     font-size: 48px;
     line-height: 108%;
     color: #000;
+
+    @media (max-width: 1200px) {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    @include vp-1080 {
+      font-size: 45px;
+    }
+
+    @include vp-720 {
+      font-size: 30px;
+    }
   }
 
   &_description {
     margin-top: 15px;
+
+    @include vp-1080 {
+      margin-top: 10px;
+    }
 
     p {
       margin-bottom: 0;
@@ -741,6 +925,11 @@ img {
       font-size: 18px;
       line-height: 133%;
       color: rgba(0, 0, 0, 0.7);
+
+      @media (max-width: 1200px) {
+        text-align: center;
+        margin-top: 8px;
+      }
     }
   }
 
@@ -765,6 +954,10 @@ img {
 
     transition: $trans-default;
 
+    @include vp-1080 {
+      margin-top: 15px;
+    }
+
     &:hover,
     &:focus {
       background: rgba(0, 135, 234, 0.8);
@@ -780,6 +973,10 @@ img {
   padding: 100px 20px;
   text-align: center;
 
+  @include vp-1080 {
+    padding: 50px 20px;
+  }
+
   &_title {
     font-family: var(--font-family);
     font-weight: 700;
@@ -787,6 +984,14 @@ img {
     line-height: 106%;
     text-align: center;
     color: #000;
+
+    @include vp-1080 {
+      font-size: 45px;
+    }
+
+    @include vp-720 {
+      font-size: 30px;
+    }
   }
 
   &_description {
@@ -798,6 +1003,16 @@ img {
     text-align: center;
     color: rgba(0, 0, 0, 0.7);
     max-width: 720px;
+
+    @include vp-1080 {
+      max-width: 500px;
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    @include vp-720 {
+      font-size: 16px;
+    }
   }
 
   &_list {
@@ -808,6 +1023,10 @@ img {
     list-style: none;
     gap: 30px;
     margin-top: 80px;
+
+    @include vp-1080 {
+      margin-top: 30px;
+    }
   }
 
   &_item {
@@ -820,6 +1039,15 @@ img {
     width: 350px;
     min-height: 316px;
     background: #fff;
+
+    @include vp-1080 {
+      padding: 40px;
+    }
+
+    @include vp-720 {
+      max-width: 320px;
+      width: 100%;
+    }
   }
 
   &_avatar {
@@ -834,6 +1062,15 @@ img {
     line-height: 130%;
     text-align: center;
     color: #000;
+
+    @include vp-1080 {
+      margin-top: 15px;
+      font-size: 20px;
+    }
+
+    @include vp-720 {
+      font-size: 18px;
+    }
   }
 
   &_author {
@@ -844,6 +1081,15 @@ img {
     line-height: 100%;
     text-align: center;
     color: #000;
+
+    @include vp-1080 {
+      margin-top: 15px;
+      font-size: 16px;
+    }
+
+    @include vp-720 {
+      font-size: 14px;
+    }
   }
 
   &_profession {
@@ -864,6 +1110,10 @@ img {
   padding: 120px 0;
   background: #0087ea;
 
+  @include vp-1080 {
+    padding: 50px 20px;
+  }
+
   &__title {
     font-family: var(--font-family);
     font-weight: 700;
@@ -871,13 +1121,28 @@ img {
     line-height: 100%;
     text-align: center;
     color: #fff;
+
+    @include vp-1080 {
+      font-size: 45px;
+    }
+
+    @include vp-720 {
+      font-size: 30px;
+    }
   }
 
   &__list {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
     margin-top: 65px;
     list-style: none;
+
+    @include vp-1080 {
+      margin-top: 30px;
+      gap: 20px;
+    }
   }
 }
 
@@ -887,6 +1152,10 @@ img {
   flex-direction: column;
   align-items: center;
 
+  @include vp-1080 {
+    padding: 50px 20px;
+  }
+
   &__subtitle {
     font-family: var(--font-family);
     font-weight: 500;
@@ -894,6 +1163,10 @@ img {
     line-height: 130%;
     text-align: center;
     color: #0087ea;
+
+    @include vp-720 {
+      font-size: 18px;
+    }
   }
 
   &__title {
@@ -904,6 +1177,15 @@ img {
     line-height: 106%;
     text-align: center;
     color: #000;
+
+    @include vp-1080 {
+      margin-top: 10px;
+      font-size: 45px;
+    }
+
+    @include vp-720 {
+      font-size: 30px;
+    }
   }
 
   &__description {
@@ -914,6 +1196,11 @@ img {
     line-height: 130%;
     text-align: center;
     color: rgba(0, 0, 0, 0.7);
+
+    @include vp-1080 {
+      margin-top: 10px;
+      font-size: 20px;
+    }
   }
 
   &__list {
@@ -925,6 +1212,10 @@ img {
     padding: 0;
     margin: 0;
     margin-top: 65px;
+
+    @include vp-1080 {
+      margin-top: 30px;
+    }
   }
 
   &__item {
@@ -981,6 +1272,10 @@ img {
   background-size: cover;
   background-repeat: no-repeat;
 
+  @include vp-1080 {
+    padding: 50px 20px;
+  }
+
   &__title {
     font-family: var(--font-family);
     font-weight: 700;
@@ -988,6 +1283,14 @@ img {
     line-height: 106%;
     text-align: center;
     color: #fff;
+
+    @include vp-1080 {
+      font-size: 45px;
+    }
+
+    @include vp-720 {
+      font-size: 30px;
+    }
   }
 
   &__description {
@@ -999,6 +1302,15 @@ img {
     text-align: center;
     color: rgba(255, 255, 255, 0.8);
     max-width: 720px;
+
+    @include vp-1080 {
+      margin-top: 10px;
+      font-size: 20px;
+    }
+
+    @include vp-720 {
+      font-size: 18px;
+    }
   }
 
   &__list {
@@ -1008,6 +1320,10 @@ img {
     flex-wrap: wrap;
     list-style: none;
     margin-top: 60px;
+
+    @include vp-1080 {
+      margin-top: 30px;
+    }
   }
 }
 
@@ -1096,6 +1412,10 @@ img {
 .order {
   padding: 100px 20px;
 
+  @include vp-1080 {
+    padding: 50px 20px;
+  }
+
   &__wrapper {
     display: flex;
     flex-direction: column;
@@ -1113,6 +1433,14 @@ img {
     line-height: 108%;
     text-align: center;
     color: #000;
+
+    @include vp-1080 {
+      font-size: 45px;
+    }
+
+    @include vp-720 {
+      font-size: 30px;
+    }
   }
 
   &__description {
@@ -1185,6 +1513,10 @@ img {
     text-align: center;
     color: rgba(0, 0, 0, 0.4);
 
+    @include vp-720 {
+      padding: 0;
+    }
+
     a {
       list-style: none;
       color: #0087ea;
@@ -1204,6 +1536,13 @@ img {
   background: #0087ea;
   justify-items: center;
 
+  @include vp-1080 {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    background: transparent;
+  }
+
   &__text {
     margin-left: 100px;
     display: flex;
@@ -1212,6 +1551,19 @@ img {
     flex-direction: column;
     width: 100%;
     max-width: 300px;
+
+    @include vp-1080 {
+      margin-left: 0;
+      min-height: 250px;
+      background: #0087ea;
+      max-width: initial;
+    }
+
+    @include vp-720 {
+      padding: 0 20px;
+      word-wrap: break-word;
+      text-align: center;
+    }
   }
 
   &__title {
@@ -1221,6 +1573,10 @@ img {
     line-height: 114%;
     color: #fff;
     text-align: left;
+
+    @include vp-1080 {
+      text-align: center;
+    }
   }
 
   &__item {
@@ -1231,6 +1587,10 @@ img {
     line-height: 133%;
     color: rgba(255, 255, 255, 0.8);
     transition: $trans-default;
+
+    @include vp-1080 {
+      text-align: center;
+    }
 
     &--phone {
       margin-top: 19px;
@@ -1269,12 +1629,18 @@ img {
   flex-direction: column;
   align-items: center;
   padding: 70px 20px;
+  overflow: hidden;
+
+  @include vp-1080 {
+    padding: 50px 20px;
+  }
 
   &__socialList {
     display: flex;
     justify-content: center;
     gap: 10px;
     list-style: none;
+    flex-wrap: wrap;
   }
 
   &__socialLink {
@@ -1299,6 +1665,17 @@ img {
     justify-content: center;
     gap: 40px;
     margin-top: 40px;
+
+    @include vp-1080 {
+      margin-top: 20px;
+    }
+
+    @include vp-720 {
+      flex-direction: column;
+      align-items: center;
+      justify-content: initial;
+      gap: 15px;
+    }
   }
 
   &__link {
@@ -1323,5 +1700,9 @@ img {
     font-size: 15px;
     line-height: 133%;
     color: rgba(0, 0, 0, 0.6);
+
+    @include vp-1080 {
+      margin-top: 20px;
+    }
   }
 }
