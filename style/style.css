@@ -584,6 +584,11 @@ img {
   width: 100%;
   aspect-ratio: 16/9;
 }
+@media (max-width: 500px) {
+  .gallery_mainImg {
+    aspect-ratio: 4/3;
+  }
+}
 .gallery_frame {
   position: absolute;
   z-index: 2;
